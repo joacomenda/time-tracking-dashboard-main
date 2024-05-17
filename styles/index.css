@@ -1,0 +1,53 @@
+/*
+***************************************************************
+                    PADDING AND MARGINS RESET
+***************************************************************
+*/
+
+*, *::after , *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+***************************************************************
+                            COLORS
+***************************************************************
+*/
+
+:root
+{
+    /*PRIMARY*/
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    /*NEUTRAL*/
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+/*
+***************************************************************
+                        MOBILE FIRST DESIGN
+***************************************************************
+*/
+
+body
+{
+    background-color: var(--Very-dark-blue);
+}
+
+.main-container
+{
+    overflow: auto;
+    width: 90%;
+    margin: 4em auto;
+}
