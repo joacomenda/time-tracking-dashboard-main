@@ -21,7 +21,7 @@
 {
     /*PRIMARY*/
     --Blue: hsl(246, 80%, 60%);
-    --Light-red: hsl(15, 100%, 70%);
+    --Light-orange: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%);
@@ -59,6 +59,7 @@ body
     width: 90%;
     margin: 4em auto;
     display: grid;
+    gap: 1.2em;
     grid-template-areas: 
     "user"
     "work"
@@ -145,3 +146,100 @@ body
                         CARDS RESUME LAYOUT
 ***************************************************************
 */
+
+.report-card
+{
+    padding-top: 2.5em;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    position: relative;
+}
+
+.icon-images
+{
+    position: absolute;
+    top: -10px;
+    right: 15px;
+
+    z-index: 2;
+}
+
+.report-information
+{
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+    padding: 1.5em;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+.report-category
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 0.3em;
+}
+
+.report-category p
+{
+    color: white;
+    font-weight: 400;
+}
+
+.report-hours-and-resume
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-hours-and-resume h3
+{
+    color: white;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.report-hours-and-resume p
+{
+    color: var(--Pale-Blue);
+    font-size: 0.8rem;
+}
+
+#work-card
+{
+    background-color: var(--Light-orange);
+}
+
+#play-card
+{
+    background-color: var(--Soft-blue);
+}
+
+#study-card
+{
+    background-color: var(--Light-red);
+}
+
+#exercise-card
+{
+    background-color: var(--Lime-green);
+}
+
+#social-card
+{
+    background-color: var(--Violet);
+}
+
+#self-care-card
+{
+    background-color: var(--Soft-orange);
+}
