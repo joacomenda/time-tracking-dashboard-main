@@ -20,6 +20,7 @@
 :root
 {
     /*PRIMARY*/
+    --Blue: hsl(246, 80%, 60%);
     --Light-red: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
@@ -40,14 +41,107 @@
 ***************************************************************
 */
 
+/*
+***************************************************************
+                            LAYOUT
+***************************************************************
+*/
+
 body
 {
     background-color: var(--Very-dark-blue);
+    font-family: Rubik, sans-serif;
 }
 
 .main-container
 {
-    overflow: auto;
+    overflow: scroll;
     width: 90%;
     margin: 4em auto;
+    display: grid;
+    grid-template-areas: 
+    "user"
+    "work"
+    "play"
+    "study"
+    "exercise"
+    "social"
+    "self-care";
 }
+
+/*
+***************************************************************
+                        USER PANEL LAYOUT
+***************************************************************
+*/
+
+.user-menu
+{
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+}
+
+.user-information
+{
+    background-color: var(--Blue);
+    border-radius: 10px;
+    padding: 1.5em;
+
+    display: flex;
+    align-items: center;
+}
+
+.user-image
+{
+    width: 60px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.user-name-container p
+{
+    color: var(--Pale-Blue);
+    font-size: 0.8rem;
+}
+
+.user-name-container h3
+{
+    font-weight: 300;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.user-menu-options
+{
+    padding: 1.3em 1.5em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Desaturated-blue);
+}
+
+.user-menu-options p
+{
+    cursor: pointer;
+}
+
+.user-menu-options p:hover
+{
+    color: var(--Pale-Blue);
+}
+
+/*When you click between daily, Weekly or Monthly, it adds this class to the option selected and removes ir from the previous option*/
+.option-selected
+{
+    color: white;
+}
+
+
+
+/*
+***************************************************************
+                        CARDS RESUME LAYOUT
+***************************************************************
+*/
