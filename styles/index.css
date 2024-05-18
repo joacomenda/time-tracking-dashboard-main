@@ -37,7 +37,7 @@
 
 /*
 ***************************************************************
-                        MOBILE FIRST DESIGN
+                        MOBILE DESIGN
 ***************************************************************
 */
 
@@ -55,7 +55,6 @@ body
 
 .main-container
 {
-    overflow: scroll;
     width: 90%;
     margin: 4em auto;
     display: grid;
@@ -68,8 +67,6 @@ body
     "exercise"
     "social"
     "self-care";
-
-    position: relative;
 }
 
 /*
@@ -84,14 +81,19 @@ body
     border-radius: 10px;
 }
 
-.user-information
+.user-information-container
 {
     background-color: var(--Blue);
     border-radius: 10px;
-    padding: 1.5em;
+    padding: 1.5em 0;
+}
 
+.user-information
+{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .user-image
@@ -242,3 +244,9 @@ body
 {
     background-color: var(--Soft-orange);
 }
+
+/*
+***************************************************************
+                        IPAD DESIGN
+***************************************************************
+*/
