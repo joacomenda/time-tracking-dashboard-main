@@ -36,8 +36,6 @@
 
     /*FONT-SIZES*/
     --fs-xl: clamp(1.4rem , 5vw + 0.2rem , 3rem);
-    --fs-600: 3rem;
-    --fs-500: 2rem;
     --fs-400: clamp(0.8rem , 3vw + 0.1rem , 1.1rem);
 }
 
@@ -74,11 +72,6 @@ body
     "exercise"
     "social"
     "self-care";
-}
-
-.user-menu
-{
-    grid-area: user;
 }
 
 /*
@@ -170,6 +163,8 @@ body
     border-top-right-radius: 10px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
+    cursor: pointer;
 }
 
 .image-container
@@ -191,6 +186,13 @@ body
     background-color: var(--Dark-blue);
     border-radius: 10px;
     padding: 1.5em;
+
+    transition: background 0.2s;
+}
+
+.report-information:hover
+{
+    background-color: hsl(235, 46%, 45%)
 }
 
 .report-category
@@ -261,6 +263,47 @@ body
 
 /*
 ***************************************************************
+                        GRID AREAS
+***************************************************************
+*/
+
+.user-menu
+{
+    grid-area: user;
+}
+
+.work-card
+{
+    grid-area: work;
+}
+
+.play-card
+{
+    grid-area: play;
+}
+
+.study-card
+{
+    grid-area: study;
+}
+
+.exercise-card
+{
+    grid-area: exercise;
+}
+
+.social-card
+{
+    grid-area: social;
+}
+
+.self-care-card
+{
+    grid-area: self-care;
+}
+
+/*
+***************************************************************
                         IPAD DESIGN
 ***************************************************************
 */
@@ -270,7 +313,7 @@ body
     .main-container
     {
         width: 80%;
-        max-width: 750px;
+        max-width: 720px;
         grid-template-areas: 
         "user     user"
         "work     play"
@@ -281,6 +324,11 @@ body
     .user-menu-options
     {
         justify-content: space-around;
+    }
+
+    .user-image
+    {
+        width: 80px;
     }
 
     .report-category
@@ -306,8 +354,13 @@ body
 ***************************************************************
 */
 
-@media (min-width:1000px)
+@media (min-width:1100px)
 {
+    :root
+    {
+        --fs-xl: clamp(1.4rem , 5vw + 0.2rem , 2.8rem);
+    }
+
     body
     {
         height: 100vh;
@@ -356,5 +409,15 @@ body
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+    }
+
+    .user-name-container p
+    {
+        font-size: 0.8rem;
+    }
+
+    .report-hours-and-resume p 
+    {
+        font-size: 0.8rem;
     }
 }
