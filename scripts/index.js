@@ -5,6 +5,8 @@ const dailyButton = document.getElementById('daily');
 const weeklyButton = document.getElementById('weekly');
 const monthlyButton = document.getElementById('monthly');
 
+fetchDataFuction('weekly')
+
 function fetchDataFuction(optionType)
 {
     fetch('/data.json').then((request) => {  
