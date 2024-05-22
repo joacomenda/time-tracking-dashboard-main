@@ -362,7 +362,7 @@ body
 ***************************************************************
 */
 
-@media (min-width:1100px)
+@media (min-width:1000px)
 {
     :root
     {
@@ -380,7 +380,7 @@ body
     .main-container
     {
         margin: 0 auto;
-        grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+        grid-template-columns: repeat(auto-fit , minmax(180px , 1fr));
         max-width: 1000px;
         grid-template-areas: 
         "user   work       play     study"
