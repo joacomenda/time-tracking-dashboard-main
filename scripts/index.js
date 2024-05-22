@@ -1,4 +1,5 @@
 const reportCardsInformation = document.getElementsByClassName('report-hours-and-resume');
+const reportCards = document.getElementsByClassName('report-card');
 
 const dailyButton = document.getElementById('daily');
 const weeklyButton = document.getElementById('weekly');
@@ -49,18 +50,56 @@ function changeCard(dayOption ,timeFrames ,index , optionType)
     previousHours.innerHTML = `Last ${dayOption} - ${timeFrames[optionType]['previous']}hrs`;
 }
 
+function toggle(selector)
+{
+    const button = document.querySelector(selector);
+
+    if(button.classList.contains('option-selected') === false)
+    {
+        turnOffPreviousButton();
+        button.classList.add('option-selected');
+        button.classList.remove('option-available');
+    }
+}
+
+function turnOffPreviousButton()
+{
+    const previusButton = document.querySelector('.option-selected');
+    previusButton.classList.remove('option-selected');
+    previusButton.classList.add('option-available');
+}
+
+function reportCardInvisibility(option)
+{
+    for(let i = 0; i < reportCards.length; i++)
+    {
+        const reportCard = reportCards[i];
+        reportCard.style.opacity = 0;
+    }
+
+    setTimeout(() => {
+        for(let i = 0; i < reportCards.length; i++)
+        {
+            const reportCard = reportCards[i];
+            reportCard.style.opacity = 1;
+        }
+
+        fetchDataFuction(option);
+    }, 700);
+}
+
 
 dailyButton.addEventListener('click' , () => {
-    console.log('daily options');
-    fetchDataFuction('daily');
+    toggle('#daily')
+    reportCardInvisibility('daily');
 });
 
 weeklyButton.addEventListener('click' , () => {
-    console.log('weekly options');
-    fetchDataFuction('weekly');
+    toggle('#weekly')
+    reportCardInvisibility('weekly');
 });
 
 monthlyButton.addEventListener('click' , () => {
-    console.log('monthly options');
-    fetchDataFuction('monthly');
+    toggle('#monthly')
+    reportCardInvisibility('monthly');
 });
